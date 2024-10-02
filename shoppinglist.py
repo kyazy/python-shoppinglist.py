@@ -1,11 +1,18 @@
-def add_item():
-    print(f"Bitte gib den Artikel ein, der zur Einkaufsliste hinzugefügt werden soll")
-    item=input("")
-    print(f"Der Artikel {item} wurde der Einkaufsliste hinzugefügt")
+def main():
+    while True:
+        print("-----Einkaufsliste-----")
+        print("1. Artikel zur Einkaufsliste hinzufügen")
+        print("2. Einkaufsliste anzeigen")
+        print("3. Programm beenden")
 
-def show_shoppinglist():
-    if shoppinglist:
-        print(f"Deine Einkaufsliste:")
-        for item in shoppinglist:
-            print(f"{item}")
-            else print(f"Deine Einkaufsliste ist leer.")
+   choice = input("Bitte wähle 1, 2 oder 3")
+
+if choice == "1":
+    add_item()
+elif choice == "2":
+    show_shoppinglist()
+elif choice == "3":
+    print("Programm wird beendet! Auf Wiedersehen.")
+    break
+else:
+    print("Ungültige Auswahl.Bitte wähle 1, 2 oder 3.")
